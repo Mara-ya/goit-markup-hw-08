@@ -1,0 +1,51 @@
+.tasks {
+    padding-top: 0;
+    visibility: hidden;
+    display: none;
+
+    @media screen and (min-width:1200px) {
+        visibility: visible;
+        display: block;
+    }
+}
+
+.tasks__title {
+    font-size: 36px;
+    line-height: calc(42 /36);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tasks-list {
+    display: flex;
+    align-items: center;
+}
+
+.tasks-list__item{
+    width: calc(100% / 3 - 30px);
+    position: relative;
+    & + & {
+        margin-left: 30px;
+    }
+}
+
+.tasks-list__div-text{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background-color: rgba(47, 48, 58, 0.8);
+    bottom: 0;
+    left: 0;
+}
+
+.tasks-list__text {
+    font-weight: 700;
+    line-height: calc(16/14);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--second-text);
+}

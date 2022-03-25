@@ -1,0 +1,23 @@
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--first-text);
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    background-color: var(--background-fff);
+}
+
+.list {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}

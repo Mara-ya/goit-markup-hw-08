@@ -1,0 +1,230 @@
+.header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ECECEC;
+
+    @media screen and (min-width:768px) {
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+
+    @media screen and (min-width:1200px) {
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    visibility: hidden;
+    display: none;
+
+    @media screen and (min-width:768px) {
+        visibility: visible;
+        display: flex;
+    }
+}
+
+.nav-list__item {
+    font-weight: 500;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    color: var(--first-text);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+
+    &:hover, &:focus {
+    color: var(--corporate-color);
+    }
+    & + & {
+        margin-left: 50px;
+    }
+}
+
+.current {
+    color: #2196F3;
+}
+
+.current::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #2196F3;
+    position: absolute;
+    left: 0;
+    bottom: -35.5px;
+
+    @media screen and (min-width:1200px) {
+        bottom: -33.5px;
+    }
+}
+
+.header-contacts-div {
+    visibility: hidden;
+    display: none;
+
+    @media screen and (min-width:768px) {
+        visibility: visible;
+        display: flex;
+        margin-left: auto;
+    }
+}
+
+.header-contacts {
+
+    @media screen and (min-width:1200px) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.header-contacts__item {
+    font-weight: 500;
+    font-size: 12;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.02em;
+    color: var(--third-text);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+        color: var(--corporate-color);
+    }
+
+    & + & {
+        margin-top: 10px;
+    }
+
+    @media screen and (min-width:1200px) {
+        line-height: calc(16 / 14);
+
+        & + & {
+            margin-left: 50px;
+            margin-top: 0;
+        }
+    }
+}
+
+.header-contacts__link {
+    display: flex;
+    align-items: center;
+}
+
+.header-contacts__icon {
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+.header__menu-btn {
+    display: block;
+    margin-left: auto;
+    background-color: transparent;
+    border: 0px solid transparent;
+    padding: 0;
+
+    @media screen and (min-width:768px) {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+.header__menu-icon:hover, .header__menu-icon:focus{
+    fill: var(--corporate-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-menu {
+    font-family: 'Roboto';
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    position: fixed;
+    z-index: 1;
+    background-color: var(--background-fff);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding: 48px 40px;
+    overflow: auto;
+
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.menu-close-btn {
+    width: 40px;
+    height: 40px;
+    border: 0px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    &:hover, &:focus {
+        fill: var(--corporate-color);
+    }
+}
+
+.mob-menu-list__item {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: calc (47 / 40);
+    color: var(--first-text);
+
+    & + & {
+        margin-top: 32px;
+    }
+}
+
+.current-menu {
+    color: var(--corporate-color);
+}
+
+.menu-contacts__item-mail {
+    font-size: 34px;
+    line-height: calc(40 / 34);
+    color: var(--corporate-color);
+}
+
+.menu-contacts__item-tel {
+    font-size: 24px;
+    line-height: calc(28 / 24);
+    color: var(--third-text);
+    margin-top: 32px;
+}
+
+.menu-socials {
+    display: flex;
+    overflow: auto;
+    margin-top: 64px;
+}
+
+.menu-socials__item {
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    color: var(--corporate-color);
+
+    & + & {
+        margin-left: 20px;
+    }
+}
